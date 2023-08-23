@@ -1,28 +1,35 @@
-// src/routes/Routes.js
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "../components/Header";
+import { Routes, Route } from "react-router-dom"; // Import Routes and Route
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home from "../components/Home";
 import Items from "../components/Items";
 import Customers from "../components/Customers";
 import DeliveryVehicles from "../components/DeliveryVehicles";
 import Orders from "../components/Orders";
+import ViewItem from "../components/ViewItem";
 
-function Routes() {
+function AppRoutes() {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/items" component={Items} />
-        <Route path="/customers" component={Customers} />
-        <Route path="/delivery-vehicles" component={DeliveryVehicles} />
-        <Route path="/orders" component={Orders} />
-      </Switch>
-      <Footer />
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/items" element={<Items />} />
+      <Route path="/customers" element={<Customers />} />
+      <Route path="/delivery-vehicles" element={<DeliveryVehicles />} />
+      <Route path="/view/:itemId" element={<ViewItem/>} />
+      <Route path="/orders" element={<Orders />} />
+    </Routes>
   );
 }
 
-export default Routes;
+function Routex() {
+  return (
+    <>
+      <Navbar />
+      <AppRoutes />
+      <Footer />
+    </>
+  );
+}
+
+export default Routex;
