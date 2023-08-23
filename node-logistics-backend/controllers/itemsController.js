@@ -10,6 +10,18 @@ const getItems = async (req, res) => {
   }
 };
 
+const getItemById = async (req, res) => {
+  try {
+    const item = await Item.findById(req.params.id);
+    if (!item) {
+      return res.status(404).json({ message: 'Item not found' });
+    }
+    res.json(item);
+  } catch (error) {
+    res.status(400).json({ message: 'Error getting item by ID', error: error.message });
+  }
+};
+
 const createItem = async (req, res) => {
   try {
     const newItem = new Item(req.body);
@@ -40,6 +52,7 @@ const deleteItem = async (req, res) => {
 
 module.exports = {
   getItems,
+  getItemById, // Add the new function here
   createItem,
   updateItem,
   deleteItem,

@@ -9,6 +9,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -22,50 +23,62 @@ function Navbar() {
         direction={{ base: "row", md: "row" }}
       >
         <Flex align="center">
-          <Text fontWeight="bold" fontSize="lg" color="white">
-            Logistics
-          </Text>
+          <Link to="/">
+            <Text fontWeight="bold" fontSize="xl" color="white">
+              Logistics
+            </Text>
+          </Link>
         </Flex>
         <Flex align="center" display={{ base: "none", md: "flex" }}>
-          <Button
-            variant="ghost"
-            color="white"
-            mr={4}
-            _hover={{ textDecoration: "none" }}
-          >
-            Home
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            mr={4}
-            _hover={{ textDecoration: "none" }}
-          >
-            Items
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            mr={4}
-            _hover={{ textDecoration: "none" }}
-          >
-            Customers
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            mr={4}
-            _hover={{ textDecoration: "none" }}
-          >
-            Vehicles
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            _hover={{ textDecoration: "none" }}
-          >
-            Orders
-          </Button>
+          <Link to="/">
+            <Button
+              variant="ghost"
+              color="white"
+              mr={4}
+              _hover={{ textDecoration: "none" }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link to="/items">
+            <Button
+              variant="ghost"
+              color="white"
+              mr={4}
+              _hover={{ textDecoration: "none" }}
+            >
+              Items
+            </Button>
+          </Link>
+          <Link to="/customers">
+            <Button
+              variant="ghost"
+              color="white"
+              mr={4}
+              _hover={{ textDecoration: "none" }}
+            >
+              Customers
+            </Button>
+          </Link>
+          <Link to="/delivery-vehicles">
+            <Button
+              variant="ghost"
+              color="white"
+              mr={4}
+              _hover={{ textDecoration: "none" }}
+            >
+              Vehicles
+            </Button>
+          </Link>
+          <Link to="/orders">
+            <Button
+              variant="ghost"
+              color="white"
+              _hover={{ textDecoration: "none" }}
+            >
+              Orders
+            </Button>
+          </Link>
           <IconButton
             ml={4}
             aria-label="Toggle Color Mode"
@@ -82,50 +95,60 @@ function Navbar() {
       </Flex>
       {isOpen && (
         <Box mt={2}>
-          <Button
-            variant="ghost"
-            color="white"
-            w="full"
-            mb={2}
-            _hover={{ textDecoration: "none" }}
-          >
-            Home
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            w="full"
-            mb={2}
-            _hover={{ textDecoration: "none" }}
-          >
-            Items
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            w="full"
-            mb={2}
-            _hover={{ textDecoration: "none" }}
-          >
-            Customers
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            w="full"
-            mb={2}
-            _hover={{ textDecoration: "none" }}
-          >
-            Vehicles
-          </Button>
-          <Button
-            variant="ghost"
-            color="white"
-            w="full"
-            _hover={{ textDecoration: "none" }}
-          >
-            Orders
-          </Button>
+          <Link to="/">
+            <Button
+              variant="ghost"
+              color="white"
+              w="full"
+              mb={2}
+              _hover={{ textDecoration: "none" }}
+            >
+              Home
+            </Button>
+          </Link>
+          <Link to="/items">
+            <Button
+              variant="ghost"
+              color="white"
+              w="full"
+              mb={2}
+              _hover={{ textDecoration: "none" }}
+            >
+              Items
+            </Button>
+          </Link>
+          <Link to="/customers">
+            <Button
+              variant="ghost"
+              color="white"
+              w="full"
+              mb={2}
+              _hover={{ textDecoration: "none" }}
+            >
+              Customers
+            </Button>
+          </Link>
+          <Link to="/delivery-vehicles">
+            <Button
+              variant="ghost"
+              color="white"
+              w="full"
+              mb={2}
+              _hover={{ textDecoration: "none" }}
+            >
+              Vehicles
+            </Button>
+          </Link>
+          <Link to="/orders">
+            <Button
+              variant="ghost"
+              color="white"
+              w="full"
+              _hover={{ textDecoration: "none" }}
+            >
+              Orders
+            </Button>
+          </Link>
         </Box>
       )}
     </Box>
