@@ -19,6 +19,6 @@ db.once("open", () => {
 });
 
 // Use routes
-app.use("/api", routes); // You can prefix your API routes with '/api'
+app.use("/api", routes);
 
 module.exports = app;
