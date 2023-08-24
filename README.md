@@ -53,10 +53,10 @@ Logistics is a modern and user-friendly website that provides reliable logistics
 2. Install dependencies for both frontend and backend:
 
    ```bash
-   cd logistics/frontend
+   cd logistics-frontend
    npm install
 
-   cd ../backend
+   cd node-logistics-backend
    npm install
    ```
 
