@@ -18,6 +18,7 @@ import {
 } from '@chakra-ui/react';
 import { EditIcon, DeleteIcon } from '@chakra-ui/icons';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 function Customers() {
   const [customers, setCustomers] = useState([]);
@@ -69,13 +70,30 @@ function Customers() {
     }
   };
 
-  const handleDelete = async (customerId) => {
-    try {
-      await axios.delete(`http://localhost:5000/api/customers/${customerId}`);
-      fetchCustomers();
-    } catch (error) {
-      console.error('Error deleting customer:', error);
-    }
+  const confirmDelete = (customerId) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'This action cannot be undone.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await axios.delete(`http://localhost:5000/api/customers/${customerId}`);
+          Swal.fire(
+            'Deleted!',
+            'The customer has been deleted.',
+            'success'
+          );
+          fetchCustomers();
+        } catch (error) {
+          console.error('Error deleting customer:', error);
+        }
+      }
+    });
   };
 
   return (
@@ -97,7 +115,7 @@ function Customers() {
           mb={2}
         />
         <Button colorScheme="blue" onClick={handleCreate}>
-          Create Customer
+          Add Customer
         </Button>
       </Flex>
       {customers.map((customer) => (
@@ -131,7 +149,7 @@ function Customers() {
               icon={<DeleteIcon />}
               colorScheme="red"
               size="sm"
-              onClick={() => handleDelete(customer._id)}
+              onClick={() => confirmDelete(customer._id)}
             />
           </Flex>
         </Flex>

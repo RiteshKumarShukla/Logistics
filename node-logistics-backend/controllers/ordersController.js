@@ -38,9 +38,26 @@ const deleteOrder = async (req, res) => {
   }
 };
 
+
+const patchOrder = async (req, res) => {
+  try {
+    const { isDelivered } = req.body;
+    const updatedOrder = await Order.findByIdAndUpdate(
+      req.params.id,
+      { isDelivered },
+      { new: true }
+    );
+    res.json(updatedOrder);
+  } catch (error) {
+    res.status(400).json({ message: 'Error updating order', error: error.message });
+  }
+};
+
+
 module.exports = {
   getOrders,
   createOrder,
   updateOrder,
   deleteOrder,
+  patchOrder
 };

@@ -17,6 +17,7 @@ import {
     ModalCloseButton,
     Select,
 } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 import axios from "axios";
 
 function ViewItem() {
@@ -92,12 +93,22 @@ function ViewItem() {
             };
 
             await axios.post('http://localhost:5000/api/orders', orderData);
-            console.log(orderData)
             setShowModal(false);
+            Swal.fire({
+                icon: 'success',
+                title: 'Added to Order',
+                text: 'Item added to order successfully!',
+            });
         } catch (error) {
             console.error('Error adding order:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'An error occurred while adding the item to the order.',
+            });
         }
     }
+
     const handleOpenModal = () =>{
         setShowModal(true);
     }

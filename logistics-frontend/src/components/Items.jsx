@@ -10,9 +10,11 @@ import {
   Select,
   useColorModeValue,
   Button,
+  Spinner,
 } from "@chakra-ui/react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const dummyImages = [
   "https://images.unsplash.com/photo-1426024084828-5da21e13f5dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9iaWxlJTIwYW5kJTIwbGFwdG9wfGVufDB8fDB8fHww&w=1000&q=80",
@@ -33,7 +35,8 @@ function Items() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
-  const [sortBy, setSortBy] = useState("name"); // Default sorting by name
+  const [loading, setLoading] = useState(true);
+  const [sortBy, setSortBy] = useState("name");
   const bgColor = useColorModeValue("gray.100", "gray.800");
 
   useEffect(() => {
@@ -41,6 +44,7 @@ function Items() {
       .get("http://localhost:5000/api/items/")
       .then((response) => {
         setItems(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching items:", error);
@@ -74,6 +78,16 @@ function Items() {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const handleViewItem = (itemName) => {
+    Swal.fire({
+      icon: "info",
+      title: "Item View",
+      text: `You are viewing ${itemName}`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
+
   return (
     <Box bg={bgColor} p={8}>
       <Heading as="h1" mb={4}>
@@ -98,32 +112,41 @@ function Items() {
         </Select>
       </Flex>
       <Stack spacing={8}>
-        {currentItems.map((item) => (
-          <Flex key={item._id} rounded="lg" shadow="md" p={4}>
-            <Image
-              src={getRandomImage()}
-              alt={item.name}
-              width={"25%"}
-              height={"25%"}
-              borderRadius={"5%"}
-              objectFit="cover"
-            />
-            <Box ml={4}>
-              <Text fontWeight="bold" fontSize="lg">
-                {item.name}
-              </Text>
-              <Text mt={2}>Price: ${item.price}</Text>
-              <Link to={`/view/${item._id}`}>
-                {" "}
-                {/* Use Link to navigate to view page */}
-                <Button colorScheme="blue" mt={2}>
-                  View Item
-                </Button>
-              </Link>
-            </Box>
+        {loading ? (
+          <Flex justify="center" align="center" h="200px">
+            <Spinner size="xl" />
           </Flex>
-        ))}
+        ) : (
+          currentItems.map((item) => (
+            <Flex key={item._id} rounded="lg" shadow="md" p={4}>
+              <Image
+                src={getRandomImage()}
+                alt={item.name}
+                width={"25%"}
+                height={"25%"}
+                borderRadius={"5%"}
+                objectFit="cover"
+              />
+              <Box ml={4}>
+                <Text fontWeight="bold" fontSize="lg">
+                  {item.name}
+                </Text>
+                <Text mt={2}>Price: ${item.price}</Text>
+                <Link to={`/view/${item._id}`}>
+                  <Button
+                    colorScheme="blue"
+                    mt={5}
+                    onClick={() => handleViewItem(item.name)}
+                  >
+                    View Item
+                  </Button>
+                </Link>
+              </Box>
+            </Flex>
+          ))
+        )}
       </Stack>
+
       <Flex mt={8} justify="center">
         {Array.from({
           length: Math.ceil(sortedItems.length / itemsPerPage),

@@ -10,10 +10,35 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2"; 
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+
+  
+  const handleColorModeToggle = () => {
+    toggleColorMode();
+    Swal.fire({
+      icon: "success",
+      title: "Color Mode Changed",
+      text: `Switched to ${colorMode === "light" ? "Dark" : "Light"} mode!`,
+      timer: 1500,
+      showConfirmButton: false,
+    });
+  };
+
+  
+  const handleMenuToggle = () => {
+    isOpen ? onClose() : onOpen();
+    Swal.fire({
+      icon: "info",
+      title: "Menu Toggled",
+      text: "Mobile menu has been toggled!",
+      timer: 1500,
+      showConfirmButton: false,
+    });
+  };
 
   return (
     <Box bg="blue.500" py={3} px={4} position="sticky" top={0} zIndex={100}>
@@ -41,60 +66,67 @@ function Navbar() {
             </Button>
           </Link>
           <Link to="/items">
-            <Button
-              variant="ghost"
-              color="white"
-              mr={4}
-              _hover={{ textDecoration: "none" }}
-            >
-              Items
-            </Button>
-          </Link>
-          <Link to="/customers">
-            <Button
-              variant="ghost"
-              color="white"
-              mr={4}
-              _hover={{ textDecoration: "none" }}
-            >
-              Customers
-            </Button>
-          </Link>
-          <Link to="/delivery-vehicles">
-            <Button
-              variant="ghost"
-              color="white"
-              mr={4}
-              _hover={{ textDecoration: "none" }}
-            >
-              Vehicles
-            </Button>
-          </Link>
-          <Link to="/orders">
-            <Button
-              variant="ghost"
-              color="white"
-              _hover={{ textDecoration: "none" }}
-            >
-              Orders
-            </Button>
-          </Link>
+          <Button
+            variant="ghost"
+            color="white"
+            mr={4}
+            _hover={{ textDecoration: "none" }}
+          >
+            Items
+          </Button>
+        </Link>
+        <Link to="/customers">
+          <Button
+            variant="ghost"
+            color="white"
+            mr={4}
+            _hover={{ textDecoration: "none" }}
+          >
+            Customers
+          </Button>
+        </Link>
+        <Link to="/delivery-vehicles">
+          <Button
+            variant="ghost"
+            color="white"
+            mr={4}
+            _hover={{ textDecoration: "none" }}
+          >
+            Vehicles
+          </Button>
+        </Link>
+        <Link to="/orders">
+          <Button
+            variant="ghost"
+            color="white"
+            _hover={{ textDecoration: "none" }}
+          >
+            Orders
+          </Button>
+        </Link>
           <IconButton
             ml={4}
             aria-label="Toggle Color Mode"
             icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            onClick={toggleColorMode}
+            onClick={handleColorModeToggle}
           />
         </Flex>
         <IconButton
           aria-label="Toggle Menu"
           icon={<HamburgerIcon />}
-          onClick={isOpen ? onClose : onOpen}
+          onClick={handleMenuToggle}
           display={{ base: "block", md: "none" }}
         />
       </Flex>
       {isOpen && (
         <Box mt={2}>
+          <IconButton
+            ml={280}
+            mt={-79}
+            aria-label="Toggle Color Mode"
+            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            onClick={handleColorModeToggle}
+          />
           <Link to="/">
             <Button
               variant="ghost"
