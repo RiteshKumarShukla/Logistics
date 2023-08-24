@@ -1,8 +1,4 @@
-# Syook-Logistics
-Certainly! Here's a basic template for your README file. You can customize it with more information, screenshots, and any additional sections you'd like to include:
-
-```markdown
-# Logistics Website
+# Logistics
 
 
 
@@ -41,7 +37,7 @@ Logistics is a modern and user-friendly website that provides reliable logistics
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/riteshkumarshukla/logistics-website.git
+   git clone https://github.com/RiteshKumarShukla/Syook-Node-Logistics.git
    ```
 
 2. Install dependencies for both frontend and backend:
