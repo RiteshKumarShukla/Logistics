@@ -46,7 +46,7 @@ function ViewItem() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/api/items/${itemId}`)
+            .get(`https://logistic-cyvh.onrend\er.com/api/items/${itemId}`)
             .then((response) => {
                 setItem(response.data);
             })
@@ -55,7 +55,7 @@ function ViewItem() {
             });
 
         axios
-            .get("http://localhost:5000/api/customers")
+            .get("https://logistic-cyvh.onrend\er.com/api/customers")
             .then((response) => {
                 setCustomers(response.data);
             })
@@ -64,7 +64,7 @@ function ViewItem() {
             });
 
         axios
-            .get("http://localhost:5000/api/delivery-vehicles")
+            .get("https://logistic-cyvh.onrend\er.com/api/delivery-vehicles")
             .then((response) => {
                 setDeliveryVehicles(response.data);
             })
@@ -92,7 +92,7 @@ function ViewItem() {
                 isDelivered: false,
             };
 
-            await axios.post('http://localhost:5000/api/orders', orderData);
+            await axios.post('https://logistic-cyvh.onrend\er.com/api/orders', orderData);
             setShowModal(false);
             Swal.fire({
                 icon: 'success',

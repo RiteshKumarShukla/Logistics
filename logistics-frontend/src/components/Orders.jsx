@@ -30,7 +30,7 @@ function OrdersList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/orders")
+      .get("https://logistic-cyvh.onrender.com/api/orders")
       .then((response) => {
         setOrders(response.data);
       })
@@ -50,7 +50,7 @@ function OrdersList() {
 
       setOrders(updatedOrders);
 
-      await axios.patch(`http://localhost:5000/api/orders/${orderId}`, {
+      await axios.patch(`https://logistic-cyvh.onrender.com/api/orders/${orderId}`, {
         isDelivered: updatedOrders.find((order) => order._id === orderId).isDelivered,
       });
 

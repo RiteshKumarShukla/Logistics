@@ -36,7 +36,7 @@ function DeliveryVehicles() {
 
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/delivery-vehicles');
+      const response = await axios.get('https://logistic-cyvh.onrender.com/api/delivery-vehicles');
       setVehicles(response.data);
     } catch (error) {
       console.error('Error fetching vehicles:', error);
@@ -45,7 +45,7 @@ function DeliveryVehicles() {
 
   const handleCreate = async () => {
     try {
-      await axios.post('http://localhost:5000/api/delivery-vehicles', {
+      await axios.post('https://logistic-cyvh.onrender.com/api/delivery-vehicles', {
         registrationNumber,
         vehicleType,
         city,
@@ -66,7 +66,7 @@ function DeliveryVehicles() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/delivery-vehicles/${editVehicleId}`, {
+      await axios.put(`https://logistic-cyvh.onrender.com/api/delivery-vehicles/${editVehicleId}`, {
         registrationNumber,
         vehicleType,
         city,
@@ -94,7 +94,7 @@ function DeliveryVehicles() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:5000/api/delivery-vehicles/${vehicleId}`);
+          await axios.delete(`https://logistic-cyvh.onrender.com/api/delivery-vehicles/${vehicleId}`);
           Swal.fire(
             'Deleted!',
             'The vehicle has been deleted.',

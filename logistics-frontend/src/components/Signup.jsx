@@ -27,7 +27,7 @@ function Signup() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/users/signup",
+        "https://logistic-cyvh.onrender.com/api/users/signup",
         {
           username: formData.username,
           email: formData.email,

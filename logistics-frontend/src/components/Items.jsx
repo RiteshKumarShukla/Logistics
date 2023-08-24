@@ -41,7 +41,7 @@ function Items() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/items/")
+      .get("https://logistic-cyvh.onrender.com/api/items/")
       .then((response) => {
         setItems(response.data);
         setLoading(false);
