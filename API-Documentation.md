@@ -3,13 +3,13 @@
 ### User Routes
 
 #### Signup
-- **URL:** `/api/signup`
+- **URL:** `/api/users/signup`
 - **Method:** `POST`
 - **Request Body:** `{ username, email, password }`
 - **Response:** `201 Created` with `{ message: "User registered successfully" }`
 
 #### Login
-- **URL:** `/api/login`
+- **URL:** `/api/users/login`
 - **Method:** `POST`
 - **Request Body:** `{ email, password }`
 - **Response:** `200 OK` with `{ token }`
