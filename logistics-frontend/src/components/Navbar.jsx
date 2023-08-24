@@ -10,13 +10,12 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import Swal from "sweetalert2"; 
+import Swal from "sweetalert2";
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
 
-  
   const handleColorModeToggle = () => {
     toggleColorMode();
     Swal.fire({
@@ -28,7 +27,6 @@ function Navbar() {
     });
   };
 
-  
   const handleMenuToggle = () => {
     isOpen ? onClose() : onOpen();
     Swal.fire({
@@ -66,44 +64,53 @@ function Navbar() {
             </Button>
           </Link>
           <Link to="/items">
-          <Button
-            variant="ghost"
-            color="white"
-            mr={4}
-            _hover={{ textDecoration: "none" }}
-          >
-            Items
-          </Button>
-        </Link>
-        <Link to="/customers">
-          <Button
-            variant="ghost"
-            color="white"
-            mr={4}
-            _hover={{ textDecoration: "none" }}
-          >
-            Customers
-          </Button>
-        </Link>
-        <Link to="/delivery-vehicles">
-          <Button
-            variant="ghost"
-            color="white"
-            mr={4}
-            _hover={{ textDecoration: "none" }}
-          >
-            Vehicles
-          </Button>
-        </Link>
-        <Link to="/orders">
-          <Button
-            variant="ghost"
-            color="white"
-            _hover={{ textDecoration: "none" }}
-          >
-            Orders
-          </Button>
-        </Link>
+            <Button
+              variant="ghost"
+              color="white"
+              mr={4}
+              _hover={{ textDecoration: "none" }}
+            >
+              Items
+            </Button>
+          </Link>
+          <Link to="/customers">
+            <Button
+              variant="ghost"
+              color="white"
+              mr={4}
+              _hover={{ textDecoration: "none" }}
+            >
+              Customers
+            </Button>
+          </Link>
+          <Link to="/delivery-vehicles">
+            <Button
+              variant="ghost"
+              color="white"
+              mr={4}
+              _hover={{ textDecoration: "none" }}
+            >
+              Vehicles
+            </Button>
+          </Link>
+          <Link to="/orders">
+            <Button
+              variant="ghost"
+              color="white"
+              _hover={{ textDecoration: "none" }}
+            >
+              Orders
+            </Button>
+          </Link>
+          <Link to="/login">
+            <Button
+              variant="ghost"
+              color="white"
+              _hover={{ textDecoration: "none" }}
+            >
+              Login
+            </Button>
+          </Link>
           <IconButton
             ml={4}
             aria-label="Toggle Color Mode"
@@ -179,6 +186,16 @@ function Navbar() {
               _hover={{ textDecoration: "none" }}
             >
               Orders
+            </Button>
+          </Link>
+          <Link to="/login">
+            <Button
+              variant="ghost"
+              color="white"
+              w="full"
+              _hover={{ textDecoration: "none" }}
+            >
+              Login
             </Button>
           </Link>
         </Box>
