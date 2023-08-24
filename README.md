@@ -10,9 +10,9 @@
 
 Logistics is a modern and user-friendly website that provides reliable logistics solutions for businesses. This website offers features such as item management, customer tracking, delivery vehicle management, and order tracking.
 
-## API Docuemntation
+## API Documentation
 
-<h4><a href="https://github.com/RiteshKumarShukla/Logistics/blob/main/API-Documentation.md">Check API Documention Here</a></h4>
+<h4><a href="https://github.com/RiteshKumarShukla/Logistics/blob/main/API-Documentation.md">Check API Documentation Here</a></h4>
 
 ## Table of Contents
 
