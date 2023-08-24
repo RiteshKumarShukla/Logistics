@@ -1,5 +1,5 @@
 # Logistics
-
+![Alt text](image.png)
 
 
 ## Description
@@ -20,6 +20,8 @@ Logistics is a modern and user-friendly website that provides reliable logistics
 - Secure login and signup functionality
 - Private routes for authenticated users
 - Order tracking and management system
+- Filtering , Sorting , Searching on various aspects
+- Pagination
 - Responsive design for mobile and desktop
 
 ## Technologies Used
