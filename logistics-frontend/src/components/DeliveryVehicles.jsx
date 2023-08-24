@@ -19,6 +19,7 @@ import {
 } from '@chakra-ui/react';
 import { EditIcon, DeleteIcon } from '@chakra-ui/icons';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 function DeliveryVehicles() {
   const [vehicles, setVehicles] = useState([]);
@@ -81,13 +82,30 @@ function DeliveryVehicles() {
     }
   };
 
-  const handleDelete = async (vehicleId) => {
-    try {
-      await axios.delete(`http://localhost:5000/api/delivery-vehicles/${vehicleId}`);
-      fetchVehicles();
-    } catch (error) {
-      console.error('Error deleting vehicle:', error);
-    }
+  const handleDelete = (vehicleId) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'This action cannot be undone.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!',
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          await axios.delete(`http://localhost:5000/api/delivery-vehicles/${vehicleId}`);
+          Swal.fire(
+            'Deleted!',
+            'The vehicle has been deleted.',
+            'success'
+          );
+          fetchVehicles();
+        } catch (error) {
+          console.error('Error deleting vehicle:', error);
+        }
+      }
+    });
   };
 
   return (
