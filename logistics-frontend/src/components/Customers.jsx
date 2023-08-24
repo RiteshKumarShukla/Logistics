@@ -34,7 +34,7 @@ function Customers() {
 
   const fetchCustomers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/customers');
+      const response = await axios.get('https://logistic-cyvh.onrender.com/api/customers');
       setCustomers(response.data);
     } catch (error) {
       console.error('Error fetching customers:', error);
@@ -43,7 +43,7 @@ function Customers() {
 
   const handleCreate = async () => {
     try {
-      await axios.post('http://localhost:5000/api/customers', { name, city });
+      await axios.post('https://logistic-cyvh.onrender.com/api/customers', { name, city });
       setName('');
       setCity('');
       fetchCustomers();
@@ -59,7 +59,7 @@ function Customers() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/customers/${editCustomerId}`, { name, city });
+      await axios.put(`https://logistic-cyvh.onrender.com/api/customers/${editCustomerId}`, { name, city });
       setName('');
       setCity('');
       setEditCustomerId(null);
@@ -82,7 +82,7 @@ function Customers() {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:5000/api/customers/${customerId}`);
+          await axios.delete(`https://logistic-cyvh.onrender.com/api/customers/${customerId}`);
           Swal.fire(
             'Deleted!',
             'The customer has been deleted.',
