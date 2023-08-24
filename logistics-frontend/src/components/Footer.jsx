@@ -14,9 +14,14 @@ function Footer() {
         align="center"
         px={{ base: 4, md: 8 }}
       >
-        <Text fontSize="lg" fontWeight="bold" color="white">
-          Logistics Inc.
-        </Text>
+        <Flex direction="column" align="flex-start">
+          <Text fontSize="xl" fontWeight="bold" color="white" mb={2}>
+            Logistics Inc.
+          </Text>
+          <Text fontSize="sm" color={textColor}>
+            Your Trusted Partner in Logistics Solutions
+          </Text>
+        </Flex>
         <Flex mt={{ base: 4, md: 0 }} direction="column" align="flex-start">
           <Link href="#" color={textColor} mb={2}>
             Home
