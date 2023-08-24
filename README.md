@@ -2,7 +2,7 @@
 
 <h1><a href="https://syook-logistics.netlify.app/">Deployed Link</a></h1>
 
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/3f55cae8-1c62-4cad-b93e-e79a17ce8783)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/6c8fb77f-6e60-400a-ac3d-302181c1590d)
 
 
 
@@ -80,44 +80,52 @@ Logistics is a modern and user-friendly website that provides reliable logistics
 ## Screenshots
 
 ### Landing Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/718c103e-4cc5-4a18-916a-e6bfb773b54e)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/d7c24445-c47f-4900-be64-56fdb9d8c2de)
 
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/08f33929-4bae-4e43-8812-6d06a22c136e)
+
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/b3e1dca7-45df-4b28-814f-dc45df674b57)
 
 
 ### Login Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/cbef18e3-0bc4-4c48-b3fb-4723d2157094)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/06d6ae88-1897-47ff-bc9c-2734e4141b4f)
 
 
 ### SignUp Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/6e676c17-bbf9-4198-b121-92ccf0d65866)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/792ac44d-5aa8-47a2-83b1-d6767a0b8c6b)
 
 
 ### Items Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/f25c19b6-08b0-4a5f-9a63-fb263799436a)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/8fc6f803-0da7-4a36-a7f4-7df5d7d39198)
 
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/6ddf7c69-c24e-41d5-b28a-a9244c4d5fd7)
+
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/1c3c4b5d-34a6-4a1c-af01-e7c9c3f35ba2)
 
 ### Single Items Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/8c9d51a1-0f9b-487c-b9a4-e2ae96176ee8)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/0fb808cf-32b1-4815-b074-959950d0830c)
 
 
 ### Customers Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/ebaded7f-79b1-431f-82a9-457d6172a233)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/c5ef33fd-9694-4db7-8aea-a287ba5e5254)
 
 
 ### Vehicles Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/b8acabe8-a9a6-4aeb-a12e-03d38d507115)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/98dccdb6-7e8d-4ec7-81ef-67c1aa620523)
 
 
 ### Orders Page
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/cac61f45-56de-4c15-89ea-b4383bb8456b)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/f1e10f0e-7043-4776-a161-dee2618cd5b5)
+
 
 ### Theme Customization
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/19cfe302-9173-49dc-b53c-5b5008630e29)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/4088462d-89c1-45ab-8419-e9532b47d971)
 
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/5d68e7e9-2fc6-44c5-80d8-e7d4df218dca)
 
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/98cf3c7b-c3f4-4d16-a695-c6ff7a9fceee)
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/7f3d170e-0b88-462b-916a-cdc1543183df)
 
-![image](https://github.com/RiteshKumarShukla/Syook-Node-Logistics/assets/110231091/a7a049cd-0aa0-404b-a93c-46f8dff9ac42)
+
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/f2f0b91a-41da-43e8-82a6-64aa5045ed8a)
+
+
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/1b047af5-93ad-4476-bed2-8495e4285fca)
+
+![image](https://github.com/RiteshKumarShukla/Logistics/assets/110231091/a1741545-a680-4548-bd73-66538f2a9492)
