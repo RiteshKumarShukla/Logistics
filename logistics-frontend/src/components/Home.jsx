@@ -30,14 +30,16 @@ function HomePage() {
         color="white"
       >
         <Heading as="h1" size="xl" mb={4}>
-          Welcome to Logistics Inc.
+          Elevate Your Logistics Experience
         </Heading>
-        <Text fontSize="lg" mb={8}>
-          Your Trusted Partner for Reliable Logistics Solutions
+        <Text fontSize="xl" mb={8}>
+          Welcome to Logistics Inc., your partner for seamless logistics solutions.
+          <br />
+          Experience swift deliveries and secure warehousing with us.
         </Text>
         <Link to="/items">
           <Button colorScheme="blue" size="lg">
-            Get Started
+            Explore Services
           </Button>
         </Link>
       </Flex>
@@ -53,8 +55,11 @@ function HomePage() {
             src="https://media.istockphoto.com/id/144235610/photo/white-delivery-truck.jpg?s=612x612&w=0&k=20&c=gQVsuTT74_pf4sudYpeP9sc_9phzThXpDvcIB0OjsO8="
             alt="Delivery Truck"
           />
-          <Text fontSize={30} ml={10} mt={4}>
+          <Text fontSize={24} mt={4}>
             Fast and Efficient Deliveries
+          </Text>
+          <Text fontSize="md" mt={2} color="gray.600">
+            We ensure your goods reach their destination quickly and safely.
           </Text>
         </Box>
         <Box w={{ base: "100%", md: "45%" }} maxW="600px">
@@ -64,8 +69,11 @@ function HomePage() {
             src="https://img.sdcexec.com/files/base/acbm/scn/image/2022/02/MicrosoftTeams_image__1_.6202f6c4832ae.png?auto=format%2Ccompress&fit=crop&h=288&q=70&w=512"
             alt="Warehouse"
           />
-          <Text fontSize={30} ml={10} mt={4}>
+          <Text fontSize={24} mt={4}>
             Secure Storage and Warehousing
+          </Text>
+          <Text fontSize="md" mt={2} color="gray.600">
+            Our state-of-the-art warehouses provide safe storage for your goods.
           </Text>
         </Box>
       </Flex>
