@@ -1,5 +1,5 @@
 # Logistics
-![Alt text](image.png)
+
 
 
 ## Description
